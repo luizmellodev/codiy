@@ -11,13 +11,15 @@ struct ContentView: View {
     var screenSize = UIScreen.main.bounds.size
     @State var showSplash = true
     var body: some View {
-        ZStack {
-            if showSplash {
-                SplashScreen()
-                    .scaleEffect(screenSize.height > 1000 ? 2 : 1)
-            }
-            else {
-                WelcomeView()
+        NavigationView {
+            ZStack {
+                if showSplash {
+                    SplashScreen()
+                        .scaleEffect(screenSize.height > 1000 ? 2 : 1)
+                }
+                else {
+                    LogInView()
+                }
             }
         }
         .onAppear {

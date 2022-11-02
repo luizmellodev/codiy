@@ -10,7 +10,6 @@ import SwiftUI
 struct WelcomeView: View {
     var screenSize = UIScreen.main.bounds.size
     var body: some View {
-        NavigationView {
             ZStack {
                 Color("PurpleBackground")
                     .ignoresSafeArea()
@@ -75,8 +74,6 @@ struct WelcomeView: View {
                     
                 }
             }
-        }
-        .navigationViewStyle(.stack)
     }
 }
 

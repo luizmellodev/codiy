@@ -16,6 +16,8 @@
 		385B12682911B037003BEABF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 385B12672911B037003BEABF /* FirebaseFirestore */; };
 		385B126A2911B037003BEABF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 385B12692911B037003BEABF /* FirebaseFirestoreSwift */; };
 		385B126C2911B037003BEABF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 385B126B2911B037003BEABF /* FirebaseStorage */; };
+		385B126E2911CEC8003BEABF /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B126D2911CEC8003BEABF /* LogInView.swift */; };
+		385B12702911CEF9003BEABF /* LogInAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B126F2911CEF9003BEABF /* LogInAnimationView.swift */; };
 		38C6DCCF2901D4BD001B9FE7 /* CodiyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6DCCE2901D4BD001B9FE7 /* CodiyApp.swift */; };
 		38C6DCD12901D4BD001B9FE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6DCD02901D4BD001B9FE7 /* ContentView.swift */; };
 		38C6DCD32901D4BF001B9FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C6DCD22901D4BF001B9FE7 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		385B125A2910C31D003BEABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		385B125B2910C4BF003BEABF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		385B125E2911A8D6003BEABF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		385B126D2911CEC8003BEABF /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		385B126F2911CEF9003BEABF /* LogInAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAnimationView.swift; sourceTree = "<group>"; };
 		38C6DCCB2901D4BD001B9FE7 /* Codiy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codiy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C6DCCE2901D4BD001B9FE7 /* CodiyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiyApp.swift; sourceTree = "<group>"; };
 		38C6DCD02901D4BD001B9FE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +70,23 @@
 			path = Articles;
 			sourceTree = "<group>";
 		};
+		385B12712911F446003BEABF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				385B12722911F44C003BEABF /* LoginHome */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		385B12722911F44C003BEABF /* LoginHome */ = {
+			isa = PBXGroup;
+			children = (
+				385B126D2911CEC8003BEABF /* LogInView.swift */,
+				385B126F2911CEF9003BEABF /* LogInAnimationView.swift */,
+			);
+			path = LoginHome;
+			sourceTree = "<group>";
+		};
 		38C6DCC22901D4BD001B9FE7 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +111,7 @@
 				381BB94D29109D2E009BEC81 /* Content */,
 				38C6DCCE2901D4BD001B9FE7 /* CodiyApp.swift */,
 				38C6DCD02901D4BD001B9FE7 /* ContentView.swift */,
+				385B12712911F446003BEABF /* Authentication */,
 				385B125B2910C4BF003BEABF /* WelcomeView.swift */,
 				38C6DCD22901D4BF001B9FE7 /* Assets.xcassets */,
 				38C6DCD42901D4BF001B9FE7 /* Preview Content */,
@@ -188,8 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385B126E2911CEC8003BEABF /* LogInView.swift in Sources */,
 				381BB95029109F4C009BEC81 /* SplashScreen.swift in Sources */,
 				38C6DCD12901D4BD001B9FE7 /* ContentView.swift in Sources */,
+				385B12702911CEF9003BEABF /* LogInAnimationView.swift in Sources */,
 				38C6DCCF2901D4BD001B9FE7 /* CodiyApp.swift in Sources */,
 				385B125C2910C4BF003BEABF /* WelcomeView.swift in Sources */,
 			);

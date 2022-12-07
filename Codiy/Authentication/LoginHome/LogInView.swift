@@ -9,12 +9,55 @@ import SwiftUI
 
 struct LogInView: View {
     @State var isNavigate = false
+    
     var body: some View {
         ZStack {
             LogInAnimationView()
             
-            VStack(spacing: 20) {
-                TextFieldComponent(text: "Teste", icon: "logo", isNavigate: $isNavigate)
+            VStack {
+                Spacer()
+                VStack(spacing: 20) {
+                    ButtonComponent(text: "Entrar com a Apple", icon: "apple.logo", isSFSymbol: true)
+                    
+                    ButtonComponent(text: "Entrar com o Google", icon: "googlelogo", isSFSymbol: false)
+                }
+                .padding(.bottom, 90)
+                VStack {
+                    HStack {
+                        Rectangle()
+                            .frame(width: 130, height: 2)
+                            .foregroundColor(Color("TertiaryColor"))
+                        Text("ou")
+                            .padding(.horizontal)
+                        Rectangle()
+                            .frame(width: 130, height: 2)
+                            .foregroundColor(Color("TertiaryColor"))
+                    }
+                    .padding(.bottom, 40)
+                    
+                    NavigationLink(destination: EmptyView()) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 330, height: 50)
+                            .foregroundColor(Color("PrimaryColor"))
+                            .overlay {
+                                Text("Entrar com usuário e senha")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                            }
+                    }
+                    NavigationLink(destination: EmptyView()) {
+                        HStack(spacing: 0) {
+                            Text("Não tem uma conta? ")
+                            Text("Registre-se")
+                                .foregroundColor(.blue)
+                        }
+                        .foregroundColor(.primary)
+                        .font(.footnote)
+                        .padding(.vertical)
+                    }
+                    .padding(.bottom, 80)
+                    
+                }
             }
         }
     }
@@ -26,35 +69,40 @@ struct LogInView_Previews: PreviewProvider {
     }
 }
 
-struct TextFieldComponent: View {
+struct ButtonComponent: View {
     var text: String
     var icon: String
-    @Binding var isNavigate: Bool
+    var isSFSymbol: Bool
+    
     var body: some View {
         Button {
-            self.isNavigate = true
+            //action
         } label: {
-            NavigationLink(destination: WelcomeView(), isActive: $isNavigate) {
-                HStack {
+            HStack {
+                if isSFSymbol {
+                    Image(systemName: icon)
+                        .frame(width: 20, height: 20)
+                }
+                else {
                     Image(icon)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20, height: 20)
-                    Text(text)
                 }
-                .frame(width: 300)
-                .foregroundColor(Color.primary)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color("TertiaryColor"), lineWidth: 1.5)
-                )
+                Text(text)
             }
+            .frame(width: 300)
+            .foregroundColor(Color.primary)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color("TertiaryColor"), lineWidth: 1.5)
+            )
         }
     }
 }
-struct TextFieldComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        TextFieldComponent(text: "Teste", icon: "logo", isNavigate: .constant(true))
-    }
-}
+//struct TextFieldComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ButtonComponent(text: "Teste", icon: "logo", isSFSymbol: false)
+//    }
+//}

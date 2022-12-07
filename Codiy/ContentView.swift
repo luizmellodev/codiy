@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var screenSize = UIScreen.main.bounds.size
     @State var showSplash = true
+    @State private var path: [String] = []
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 if showSplash {
                     SplashScreen()

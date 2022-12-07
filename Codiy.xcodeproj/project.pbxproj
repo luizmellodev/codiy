@@ -22,6 +22,7 @@
 		38C6DCD12901D4BD001B9FE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6DCD02901D4BD001B9FE7 /* ContentView.swift */; };
 		38C6DCD32901D4BF001B9FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C6DCD22901D4BF001B9FE7 /* Assets.xcassets */; };
 		38C6DCD62901D4BF001B9FE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C6DCD52901D4BF001B9FE7 /* Preview Assets.xcassets */; };
+		38F994672912E32E002EA042 /* LogInPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F994662912E32E002EA042 /* LogInPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		38C6DCD02901D4BD001B9FE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38C6DCD22901D4BF001B9FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C6DCD52901D4BF001B9FE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38F994662912E32E002EA042 /* LogInPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				385B12722911F44C003BEABF /* LoginHome */,
+				38F994662912E32E002EA042 /* LogInPassword.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -85,6 +88,13 @@
 				385B126F2911CEF9003BEABF /* LogInAnimationView.swift */,
 			);
 			path = LoginHome;
+			sourceTree = "<group>";
+		};
+		385B12732911FB74003BEABF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		38C6DCC22901D4BD001B9FE7 = {
@@ -106,6 +116,7 @@
 		38C6DCCD2901D4BD001B9FE7 /* Codiy */ = {
 			isa = PBXGroup;
 			children = (
+				385B12732911FB74003BEABF /* Components */,
 				385B125E2911A8D6003BEABF /* GoogleService-Info.plist */,
 				385B125A2910C31D003BEABF /* Info.plist */,
 				381BB94D29109D2E009BEC81 /* Content */,
@@ -215,6 +226,7 @@
 				38C6DCD12901D4BD001B9FE7 /* ContentView.swift in Sources */,
 				385B12702911CEF9003BEABF /* LogInAnimationView.swift in Sources */,
 				38C6DCCF2901D4BD001B9FE7 /* CodiyApp.swift in Sources */,
+				38F994672912E32E002EA042 /* LogInPassword.swift in Sources */,
 				385B125C2910C4BF003BEABF /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
